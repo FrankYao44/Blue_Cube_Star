@@ -1,0 +1,56 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e8463664-7afc-4e3f-9a06-af4f9044b930</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Blue_Cube_Star.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Blue_Cube_Star</Name>
+    <RootNamespace>Blue_Cube_Star</RootNamespace>
+    <TestFramework>Pytest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AtomHeart\AtomHeart.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Blue_Cube_Star.py" />
+    <Compile Include="PandoraHub_API\AtomHeart_API.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PandoraHub_API\test.py" />
+    <Compile Include="some_useful_func.py" />
+    <Compile Include="cyberkernel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="haddler.py" />
+    <Compile Include="orm.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orm_field.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AtomHeart\" />
+    <Folder Include="PandoraHub_API\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
