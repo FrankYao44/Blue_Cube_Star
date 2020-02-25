@@ -1,3 +1,5 @@
+#!/usr/bin python3
+# -*- coding: utf-8 -*-
 from some_useful_func import next_id
 import mysql.connector
 conn = mysql.connector.connect(user='MCV', password='raspberrypi', database='AtomHeart')
